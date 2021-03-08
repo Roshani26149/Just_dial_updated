@@ -8,7 +8,7 @@ Feature: Minu functionality
     Examples: 
      | SIDE_MENU_LINK_NAME |
      | Baby Care           |
-     | Books               |
+     | Civil Contractors   |
      | Medical             |
      | Real Estate         |
      | Travel              |

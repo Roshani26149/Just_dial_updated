@@ -14,7 +14,7 @@ import io.cucumber.junit.CucumberOptions;
             "html:target/html/htmlreport.html",
             "json:target/json/file.json",
             },
-        publish=true,
+        
         dryRun=false,
         monochrome=true
         )

@@ -1,9 +1,6 @@
 package com.jsutdial.pages;
 
 import java.util.List;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +8,7 @@ import org.openqa.selenium.WebElement;
 public class _02_SearchFunctionality {
 	
 	private WebDriver driver;
-	private static final Logger logger = LogManager.getLogger(_02_SearchFunctionality.class);
+	
 	 
 	//Parameterized constructor
 	public _02_SearchFunctionality(WebDriver driver) {
@@ -33,7 +30,7 @@ public class _02_SearchFunctionality {
 		Thread.sleep(2000);
 		driver.findElement(Search_btn).click();
 		Thread.sleep(3000);
-		logger.info("The Result of Restaurant searched ");
+		
 	}
 	
 	public void Partial_search(String resta) {
@@ -46,7 +43,7 @@ public class _02_SearchFunctionality {
 	    List<WebElement> options = driver.findElements(By.xpath("//a[contains(@id,'-')]"));
 		for (WebElement option : options) {
 		System.out.println("The Restarents are " +option.getText());
-		logger.info("The Restarents are " +option.getText());
+		
 		}
 	}
 

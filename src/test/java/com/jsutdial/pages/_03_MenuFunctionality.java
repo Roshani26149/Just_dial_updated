@@ -1,9 +1,6 @@
 package com.jsutdial.pages;
 
 import java.util.List;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +10,7 @@ import org.openqa.selenium.WebElement;
 public class _03_MenuFunctionality {
 	//initializes webdriver
 	private WebDriver driver;
-	private static final Logger logger = LogManager.getLogger(_03_MenuFunctionality.class);
+	
 
 	//Parameterized constructor
 	public _03_MenuFunctionality(WebDriver driver) {
@@ -33,7 +30,7 @@ public class _03_MenuFunctionality {
                 if(list.get(i).getText().contains(product))
 				{
                   list.get(i).click();
-                  logger.info("The Product Displayed "+list.get(i).getText());
+                  
 				}
 			}catch(StaleElementReferenceException e) 
 			{
@@ -41,7 +38,7 @@ public class _03_MenuFunctionality {
 				if(list.get(i).getText().contains(product)) 
 				{
 					list.get(i).click();
-					logger.info("The Product Displayed "+list.get(i).getText());
+					
 				}
 				
 			}

@@ -1,8 +1,3 @@
-# Auther: Roshani Mendhe
-#Institute: Vision IT
-#Batch-09
-#Feature: Login Related Functionality
-
 Feature: Search Functionality
 
   Background: 

@@ -1,7 +1,5 @@
 package com.justdial.StepDefs;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -22,9 +20,6 @@ import io.cucumber.java.en.When;
 
 public class StepDefination {
 
-	private static final Logger logger = LogManager.getLogger(StepDefination.class);
-
-
 	WebDriver driver;
 	String base_url = "https://www.justdial.com/";
 	int implicit_wait_timeout_in_sec = 20;
@@ -42,7 +37,7 @@ public class StepDefination {
 
 		String browserName = WebDriverFactory.getBrowserName();
 		driver = WebDriverFactory.getWebDriverForBrowser(browserName);
-		logger.info("Browser invoked.");
+		
 
 		//Initialize Page Object Model
 		loginpage=new _01_LoginPage(driver);
@@ -92,7 +87,7 @@ public class StepDefination {
 	 @Then("User is displayed with the message as {string}")
 	 public void user_is_displayed_with_the_message_as(String msg) {
 		 loginpage.msg_display(msg);
-		 logger.info("The Massage displayed - "+msg);
+		
 	 }
 
 	 @When("User clicks on Login-in link at the top right corner of the application")
